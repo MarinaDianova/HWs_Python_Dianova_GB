@@ -3,6 +3,6 @@
 
 n = int(input('Введите целое положительное число N: '))
 i = 0
-while 2 ** i < n:
+while 2 ** i <= n:
     print(2 ** i, end = " ")
     i += 1
