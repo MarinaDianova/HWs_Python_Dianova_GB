@@ -28,3 +28,18 @@ else:
     x2 = k + sq
 print(f"Загаданные числа: {int(x1)}, {int(x2)}")
 # print(d)
+
+
+# # Алгоритмический способ:
+# s = int(input('Введите сумму чисел: '))
+# p = int(input('Введите произведение чисел: '))
+# for x in range(s):
+#     for y in range(p):
+#         if s == x + y and p == x * y:
+#             print(f"Загаданные числа: {x}, {y}")
+#             break
+#     else:
+#         continue
+#     break
+# else:
+#     print("Таких чисел нет")
