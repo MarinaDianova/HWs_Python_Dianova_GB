@@ -15,8 +15,8 @@ print(lst)
 x = int(input('Введите искомое число: '))
 
 cnt = 0
-for i in range(n):
-    if x == lst[i]:
+for el in lst:
+    if x == el:
         cnt += 1
 
 print(f'Число {x} встречается {cnt} раз')
