@@ -30,7 +30,7 @@ print(f'Стоимость слова {word}: {sum}')
 # # Вариант 3 словарь объединением - работает некорректно
 # letters1 = ('А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т', 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R')
 # val1 = '1'
-# dict1 = dict.fromkeys(val1, letters1)
+# dict1 = dict.fromkeys(letters1, val1)
 
 # letters2 = ('Д', 'К', 'Л', 'М', 'П', 'У', 'D', 'G')
 # val2 = '2'
