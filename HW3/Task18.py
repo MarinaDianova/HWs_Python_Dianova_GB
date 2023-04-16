@@ -13,7 +13,7 @@ lst = [random.randint(-10, 10) for i in range(n)]
 print(lst)
 
 x = int(input('Введите искомое число: '))
-comp = x ** 10
+comp = float('inf')
 
 for i in range(n):
     z = abs(x - lst[i])
