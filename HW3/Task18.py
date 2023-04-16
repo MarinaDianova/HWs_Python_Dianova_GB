@@ -15,11 +15,17 @@ print(lst)
 x = int(input('Введите искомое число: '))
 comp = float('inf')
 
-for i in range(n):
-    z = abs(x - lst[i])
+# for i in range(n):
+#     z = abs(x - lst[i])
+#     if z < comp:
+#         comp = z
+#         res = lst[i]
+
+for el in lst:
+    z = abs(x - el)
     if z < comp:
         comp = z
-        res = lst[i]
+        res = el
 
 # print(comp, res)
 print(f'Самое близкое к {x} число: {res}')
