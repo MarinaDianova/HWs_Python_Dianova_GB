@@ -13,18 +13,23 @@ lst = [random.randint(-10, 10) for i in range(n)]
 print(lst)
 
 x = int(input('Введите искомое число: '))
-comp = float('inf')
+# comp = float('inf') # comp = положительная бесконечность
+comp = abs(x - lst[0]) # Другой вариант задания стартовой точки отсчета
 
+# Идеальный вариант:
 # for i in range(n):
 #     z = abs(x - lst[i])
 #     if z < comp:
 #         comp = z
 #         res = lst[i]
 
+# Второй вариант:
 for el in lst:
     z = abs(x - el)
     if z < comp:
         comp = z
+        res = el
+    elif comp == z: # нужно только при задании точки отсчета через разницу
         res = el
 
 # print(comp, res)
