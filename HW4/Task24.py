@@ -16,13 +16,21 @@ print(f'Урожай с каждого куста: {berries}')
 
 sum = []
 
+# Долгий вариант:
+# for i in range(len(berries)-1):
+#     if i == 0:
+#         sum.append(berries[-1] + berries[0] + berries[1])
+#     elif i == n:
+#         sum.append(berries[-2] + berries[-1] + berries[0])
+#     else:
+#         sum.append(berries[i-1] + berries[i] + berries[i+1])
+
+# Правильный вариант:
 for i in range(len(berries)-1):
-    if i == 0:
-        sum.append(berries[len(berries)-1] + berries[0] + berries[1])
-    elif i == n:
-        sum.append(berries[len(berries)-2] + berries[len(berries)-1] + berries[0])
-    else:
-        sum.append(berries[i-1] + berries[i] + berries[i+1])
+    sum.append(berries[i-1] + berries[i] + berries[i+1])
+else:
+    sum.append(berries[-2] + berries[-1] + berries[0])
+    
 
 print(sum)
 print(f'Максимальное количество ягод, которое можно собрать за 1 заход: {max(sum)}')
