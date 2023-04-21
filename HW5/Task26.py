@@ -8,7 +8,7 @@ def power(a, b):
     elif b == 1:
         return a
     else:
-        res = power(a, b-1) * a
+        res = power(a, b - 1) * a
         return res
 
 A = int(input('Введите целое положительное число A: '))
