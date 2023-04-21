@@ -4,8 +4,7 @@
 
 def summa(a, b):
     if b > 0:
-        a = a + 1
-        return summa(a, b - 1)
+        return summa(a + 1, b - 1)
     return a
 
 
