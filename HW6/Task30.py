@@ -15,4 +15,12 @@ for i in range(1, n + 1):
     progr.append(a1 + (i - 1) * d)
 print(f"Арифметическая прогрессия: {progr}")
 
-# print(*progr) # Вывод распакованным списком
+# print(*progr)  # Вывод распакованным списком
+
+#Второй вариант задания формулы: 
+# a1 = int(input())
+# d = int(input())
+# n = int(input())
+# print()
+# for i in range(n):
+#     print(a1 + i * d)
