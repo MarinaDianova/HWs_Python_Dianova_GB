@@ -9,6 +9,9 @@ def power(a, b):
         return a
     return power(a, b - 1) * a
 
+# Вариант 2: Рекурсия в лямбда функции
+# power = lambda a, b: a * power(a, b - 1) if b else 1
+
 A = int(input('Введите целое положительное число A: '))
 B = int(input('Введите целое положительное число B: '))
 print(f'Число {A} в степени {B} равно {power(A, B)}')
