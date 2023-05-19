@@ -13,23 +13,44 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
+# Вариант 1:
+
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+
+# #Создаем массив согласно условию
+#     array = []
+#     for i in range(1, num_columns + 1):
+#         for j in range(1, num_rows + 1):
+#             array.append(operation(i, j))
+
+# #Выводим на форматированную печать
+#     stop = num_columns
+#     k = 1
+#     for cell in array:
+#         print(cell, '\t', end=' ')
+#         if k == stop:
+#             print("\n")
+#             stop += num_columns
+#         k += 1
+
+# print_operation_table(lambda x, y: x * y)
+
+# Вариант 2:
+
 def print_operation_table(operation, num_rows=6, num_columns=6):
-
-#Создаем массив согласно условию
-    array = []
     for i in range(1, num_columns + 1):
+        print()
         for j in range(1, num_rows + 1):
-            array.append(operation(i, j))
-
-#Выводим на форматированную печать
-    stop = num_columns
-    k = 1
-    for cell in array:
-        print(cell, '\t', end=' ')
-        if k == stop:
-            print("\n")
-            stop += num_columns
-        k += 1
+            print(f'{operation(i, j):>4}', end=' ')
 
 
 print_operation_table(lambda x, y: x * y)
+
+# Вариант 3:
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#     tab_res = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
+#     print(tab_res)
+#     for i in tab_res:
+# print(*[f"{x:>4}" for x in i])
+
+# print_operation_table(lambda x, y: x * y)

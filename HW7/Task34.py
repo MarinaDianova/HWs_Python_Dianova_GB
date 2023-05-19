@@ -7,27 +7,42 @@
 # Ввод: пара-ра-рам рам-пам-папам
 # Вывод: па-ра-па-дам Парам пам-пам
 
-#Считаем гласные в каждом слове
-def countVowels(string):
-    vowels = set('ауоыэяюёие')
-    count_syllable = []
+#Вариант 1: С циклами
 
-    for i in string:
-        count = 0
-        for letter in i:
-            if letter in vowels:
-                count += 1
-        count_syllable.append(count)
-    return count_syllable
+# #Считаем гласные в каждом слове
+# def count_vowels(string):
+#     vowels = 'ауоыэяюёие'
+#     count_syllable = []
 
-# Проверяем ритм
-def rithm(count_array):
-    if len(set(count_array)) == 1:
-        return print('Парам пам-пам')
-    else:
-        return print('Пам парам')
+#     for i in string:
+#         count = 0
+#         for letter in i:
+#             if letter in vowels:
+#                 count += 1
+#         count_syllable.append(count)
+#     return count_syllable
+
+# # Проверяем ритм
+# def rithm(count_array):
+#     if len(set(count_array)) == 1:
+#         return print('Парам пам-пам')
+#     else:
+#         return print('Пам парам')
 
 
-poem = input('Введите стихотворение: ')
+# poem = input('Введите стихотворение: ')
+# # # poem = 'пара-ра-рам рам-пам-папам'
+# # rithm(count_vowels(poem.lower().split()))
+
+#Вариант 2: С функцией высшего порядка
+
+def rithm(string):
+    action = lambda x: sum(1 for i in x if i in 'аеёиоуыэюя')
+    tmp = action(string[0])
+    if all(action(i) == tmp for i in string):
+        return 'Парам пам-пам'
+    return 'Пам парам' 
+ 
 # poem = 'пара-ра-рам рам-пам-папам'
-rithm(countVowels(poem.lower().split()))
+poem = input('Введите стихотворение: ')
+print(rithm(poem.lower().split()))
